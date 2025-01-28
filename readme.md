@@ -5,7 +5,7 @@
   <a href="https://github.com/eums046">
     <img src="./assets/img/VI.png" alt="GTA VI Logo" width="400" height="400">
   </a>
-  <h3 align="center">AWD-Seatwork-1-4-BY-25/h3>
+  <h3 align="center">AWD-Seatwork-1-4-BY-25</h3>
 </div>
 
 <div align="center">
