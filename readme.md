@@ -3,9 +3,9 @@
 <br/>
 <div align="center">
   <a href="https://github.com/eums046">
-    <img src="./assets/img/VI.png" alt="GTA VI Logo" width="500" height="100">
+    <img src="./assets/img/VI.png" alt="GTA VI Logo" width="400" height="400">
   </a>
-  <h3 align="center">GTA VI-Inspired Player Management System</h3>
+  <h3 align="center">AWD-GTA VI-Inspired Player Management System</h3>
 </div>
 
 <div align="center">
@@ -14,8 +14,7 @@
 
 <br />
 
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/WD-Template-Project)
-[![wakatime](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8.svg)](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8)
+![wakatime](https://wakatime.com/badge/user/a5586167-bdae-4a0c-90d2-15e75288fa41/project/34b76b6e-4f6d-453f-8dd5-b2ab177c9c22.svg)
 
 ---
 
@@ -29,9 +28,6 @@
       <ul>
         <li><a href="#key-features">Key Features</a></li>
       </ul>
-    </li>
-    <li>
-      <a href="#installation--usage">Installation & Usage</a>
     </li>
     <li>
       <a href="#technology-stack">Technology Stack</a>
@@ -73,8 +69,33 @@ A modern player management system inspired by GTA VI's visual aesthetic, featuri
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Installation & Usage
+### Technology
+<!-- TODO: List of Technology Used -->
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
 
-1. **Clone Repository**
-   ```bash
-   git clone https://github.com/zyx-0314/WD-Template-Project.git
+
+### Project Structure
+
+```
+AWD-PlayerManagement
+└─ assets
+│   └─ css
+│   │   └─ style.css       
+│   └─ img
+│   │   └─ VI.png          
+│   └─ js
+│       └─ script.js       
+└─ index.html              
+└─ readme.md
+```
+### Resources
+
+| Title | Purpose | Link |
+|-|-|-|
+| Font Awesome | Icon System | fontawesome.com |
+| GTA VI Assets | Visual Inspiration | rockstargames.com |
+| Animate.css | Animation Library | animate.style|
+
+
