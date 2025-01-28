@@ -29,7 +29,7 @@
 }
 
 body {
-    background-image: url('/assets/img/1384116.png');
+    background-image: url('./assets/img/1384116.png');
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
@@ -38,7 +38,7 @@ body {
 }
 
 #landing {
-    background-image: url('/assets/img/1343295.jpg');
+    background-image: url('./assets/img/1343295.jpg');
     background-size: cover;
     background-attachment: fixed;
     position: relative;
