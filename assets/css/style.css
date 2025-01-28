@@ -1,0 +1,404 @@
+:root {
+    --gta-pink: #ff60cf;
+    --gta-yellow: #F0E68C;
+    --gta-white: #E0E0E0;
+    --gta-dark-bg: #1C1C1C;
+    --gta-light-bg: #2C2C2C;
+    --gta-accent-red: #FF4500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gta-pink) var(--gta-dark-bg);
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--gta-dark-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--gta-pink);
+    border-radius: 20px;
+}
+
+body {
+    background-image: url('/assets/img/1384116.png');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+}
+
+#landing {
+    background-image: url('/assets/img/1343295.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+#landing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.landing-content {
+    max-width: 600px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 10px rgba(255, 96, 207, 0.5);
+}
+
+.landing-content img {
+    display: block;
+    margin: 0 auto 2rem auto;
+    filter: drop-shadow(0 0 15px var(--gta-pink));
+}
+
+.landing-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--gta-pink), var(--gta-yellow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+    background-color: var(--gta-pink);
+    color: var(--gta-dark-bg);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    background-color: var(--gta-yellow);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--gta-pink);
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-30px); }
+    60% { transform: translateY(-15px); }
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-family: 'Agency FB', sans-serif;
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px var(--gta-pink);
+    background: linear-gradient(45deg, var(--gta-pink), var(--gta-yellow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(246, 77, 255, 0.278) 10px,
+        rgba(246, 77, 255, 0.135) 20px
+    );
+    animation: header-shine 5s linear infinite;
+}
+
+@keyframes header-shine {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.player-form {
+    background: rgba(28, 28, 28, 0.9);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--gta-pink);
+    box-shadow: 0 0 30px rgba(255, 96, 207, 0.2);
+}
+
+.cyberpunk-border {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        var(--gta-pink), 
+        var(--gta-yellow), 
+        var(--gta-accent-red));
+    z-index: -1;
+    animation: border-flow 4s linear infinite;
+    border-radius: 10px;
+}
+
+@keyframes border-flow {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.player-form h2 {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.form-group label {
+    color: var(--gta-pink);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: block;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3C3C3C;
+    color: var(--gta-white);
+    border: 2px solid var(--gta-pink);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--gta-yellow);
+    box-shadow: 0 0 10px rgba(240,230,140,0.3);
+}
+
+.glowing-btn {
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.glowing-txt {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--gta-dark-bg);
+    text-shadow: 0 0 10px var(--gta-pink);
+    background: var(--gta-pink);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.glowing-btn:hover .glowing-txt {
+    background: var(--gta-yellow);
+    box-shadow: 0 0 25px var(--gta-pink);
+    transform: scale(1.05);
+}
+
+@keyframes faulty-glitch {
+    0% { transform: translate(0); }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, -2px); }
+    75% { transform: translate(-2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.player-list {
+    background: rgba(44,44,44,0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--gta-pink);
+    box-shadow: 0 0 30px rgba(255, 96, 207, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th {
+    background: linear-gradient(180deg, 
+        var(--gta-pink) 0%, 
+        rgba(255,96,207,0.7) 100%);
+    color: var(--gta-dark-bg);
+    text-transform: uppercase;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-family: 'Agency FB', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid #3C3C3C;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.3);
+}
+
+table tr:hover {
+    background-color: rgba(255,96,207,0.1);
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.delete-btn {
+    background-color: var(--gta-accent-red);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.delete-btn:hover {
+    background-color: #FF6347;
+    transform: scale(1.05);
+}
+
+.cyberpunk-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.05) 0px,
+        rgba(255, 255, 255, 0.05) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    z-index: 999;
+}
+
+.fa-crown { color: #FFD700; }
+.fa-medal { color: #C0C0C0; }
+.fa-award { color: #CD7F32; }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .input-group {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+.highlight {
+    animation: highlight-animation 1s ease-in-out;
+}
+
+@keyframes highlight-animation {
+    0% { background-color: yellow; }
+    100% { background-color: transparent; }
+}
+
+.fade-out {
+    animation: fade-out-animation 0.3s ease-in-out forwards;
+}
+
+@keyframes fade-out-animation {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}

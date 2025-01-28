@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Management System</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" href="assets/img/VI.png" type="image/x-icon">
+</head>
+<body>
+    <div id="landing" class="landing-page">
+        <div class="landing-content">
+            <img src="assets/img/VI (1).png" alt="" class="bounce">
+            <section>
+                <p>
+                    Welcome to the Player Management System GTA VI Inspired. Here you can add new players and view the leaderboard.
+                </p>
+                <button id="startButton" class="btn-primary">Get Started</button>
+            </section>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Leaderboard</h1>
+        </header>
+
+        <section class="player-form">
+            <div class="cyberpunk-border"></div>
+            <h2><i class="fas fa-user-plus"></i> Add New Player (Max 10)</h2>
+            <form id="playerForm">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-id-card"></i> Player Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="input-group">
+                    <div class="form-group">
+                        <label for="score"><i class="fas fa-trophy"></i> Score</label>
+                        <input type="number" id="score" min="0" step="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="level"><i class="fas fa-level-up-alt"></i> Level</label>
+                        <input type="number" id="level" min="1" max="99" step="1">
+                    </div>
+                </div>
+                <button type="submit" class="glowing-btn">
+                    <span class="glowing-txt"><span class="faulty-letter">A</span>DD PLAYER</span>
+                </button>
+            </form>
+        </section>
+
+        <section class="player-list">
+            <h2>Player Rankings</h2>
+            <div class="filter-controls">
+                <select id="sortSelect">
+                    <option value="name">Sort by Name</option>
+                    <option value="score">Sort by Score</option>
+                    <option value="level">Sort by Level</option>
+                </select>
+            </div>
+            <table id="playerTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Level</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="playerTableBody">
+                    <!-- Players will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div class="cyberpunk-overlay"></div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
